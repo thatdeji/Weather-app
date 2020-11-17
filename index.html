@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Get the weather details of any city you wish to know">
+  <meta name="keywords" content="Weather, Deji, Weather">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <!--ios support-->
+  <link rel="apple-touch-icon" href="/assets/img/icons/humidity96.png">
+  <meta name='apple-mobile-web-app-status-bar' content='#f81248'>
+  <meta name='theme-color' content='#f81248'>
+  <title>Weather API</title>
+</head>
+
+<body class="flex-center flex-start">
+  <!--Toggle button-->
+  <div class="toggle-btn" onclick="this.classList.toggle('active')"></div>
+  <!--Main wrapper-->
+  <div class="wrapper flex-center mt-5">
+    <!--Main app-->
+    <div class="app-wrapper relative">
+      <div class="app-heading py-5 relative">
+        <h1 class="text-center">Weather App</h1>
+        <p class="text-center">Input name of the city to get weather</p>
+        <div class="mt-5 text-center">
+          <!--Weather Form-->
+          <form>
+            <input type="text" name="city" id="city" class="weather-input mb-5" placeholder="Name of the city">
+            <input type="submit" class="btn" id="btn" value="Search">
+          </form>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="loading none" id="loading">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!--Weather result-->
+      <div class="weather-result px-5 mt-5" id="weather-result">
+
+      </div>
+    </div>
+    <!--<div class="overlay"></div>-->
+  </div>
+
+  <!--JAVASCRIPT FILES-->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

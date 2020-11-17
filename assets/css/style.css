@@ -1,0 +1,248 @@
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  font-family: 'Roboto';
+  background: #1a1a1a;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+p {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  margin-top: 2rem;
+}
+/*Helper classes*/
+.text-center {
+  text-align: center;
+}
+.mt-5 {
+  margin-top: 5rem !important;
+}
+.mb-5 {
+  margin-bottom: 5rem !important;
+}
+.py-5 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+.relative {
+  position: relative;
+}
+.none {
+  display: none !important;
+}
+/*Button*/
+.btn {
+  padding: 1.5rem 4rem;
+  font-size: 1.8rem;
+  background-color: #E7305B;
+  color: #fff;
+  border: 1px solid #E7305B;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #f81248;
+}
+/*Body wrapper*/
+.wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+/*Weather Card*/
+.app-wrapper {
+  color: #fff;
+  width: 96%;
+  margin: auto;
+  padding: 0 1rem;
+}
+.app-heading {
+  font-size: 3rem;
+}
+/*Form*/
+label {
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+.weather-input {
+  width: 70%;
+  margin: auto;
+  display: block;
+  font-size: 2.2rem;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  height: 50px;
+  padding: 1.4rem;
+}
+.weather-input:focus {
+  outline: 0;
+}
+/*Weather result*/
+.weather-result-card-wrapper {
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+  background: #fff;
+  color: #333;
+  margin: 0 auto;
+}
+.weather-result h1 {
+  font-size: 3.2rem;
+}
+.weather-result h2 {
+  font-size: 2.5rem;
+}
+.weather-result h3{
+  font-size: 6rem;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+.weather-result p {
+  font-size: 2rem;
+}
+.weather-result sup {
+  font-size: 3rem;
+  margin-left: -1rem;
+}
+.weather-result .country {
+  background: #E7305B;
+  color: #fff;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+}
+.weather-desc {
+  display: inline-block;
+  background: #E7305B;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+/*Toggle Button*/
+.toggle-btn {
+  width: 80px;
+  height: 40px;
+  background: gray;
+  border-radius: 30px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  cursor: pointer;
+  z-index: 199999;
+  top: 30px;
+  right: 60px;
+}
+.toggle-btn.active {
+  background: #E7305B;
+}
+.toggle-btn:before{
+  position: absolute;
+  content: '°C';
+  font-size: 1.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.toggle-btn.active:before {
+  margin-left: 35px;
+  content: '°F';
+}
+/*Loading animation*/
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+.loading div {
+  background-color: #E7305B;
+  width: 18px;
+  height: 45px;
+  margin-left: 6px;
+  display: inline-block;
+  animation: loader 1.2s cubic-bezier(0,.5,.5,1) infinite;
+}
+.loading div:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.loading div:nth-child(3) {
+  animation-delay: 0.3s;
+} 
+/*Error*/
+.error-message {
+  color: #E7305B;
+  font-size: 3rem;
+}
+/*Keyframes*/
+@keyframes loader{
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.6);
+  }
+}
+/*MEDIA QUERIES*/
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 600px) {
+  .weather-input {
+    width: 90%;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  label {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 767px) {
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.space-around {
+  justify-content: space-around !important;
+}
+.dir-column {
+  flex-direction: column;
+}
+.flex-start {
+  align-items: flex-start !important;
+}
+.px-5 {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+}
+}
